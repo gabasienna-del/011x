@@ -1,13 +1,20 @@
 pluginManagement {
-  repositories { gradlePluginPortal(); google(); mavenCentral() }
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
 }
+
 dependencyResolutionManagement {
-  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-  repositories {
-    google()
-    mavenCentral()
-    maven { url 'https://api.xposed.info/' }
-  }
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://api.xposed.info/" } // Xposed API репозиторий
+    }
 }
-rootProject.name = "lsmod-call2wa"
+
+rootProject.name = "011x"
 include(":app")
